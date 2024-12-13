@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Редактировать профиль
+{% endblock %}
+
+{% block content %}
+<h1>Редактировать</h1>
+    <h1>Редактировать профиль</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}
+            {{ form.username(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}
+            {{ form.email(size=32) }}
+         </p>
+        <p>
+            {{ form.password.label }}
+            {{ form.password(size=32) }}
+        </p>
+        <p>
+            {{ form.confirm.label }}
+            {{ form.confirm(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+
+        <div>
+            <!-- h3><strong>{{ message }}</strong></h3 -->
+            <h3><strong> message_XX </strong></h3>
+        </div>
+    </form>
+
+{% endblock %}

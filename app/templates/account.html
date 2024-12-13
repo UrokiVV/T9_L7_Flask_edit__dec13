@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+аккаунт
+{% endblock %}
+
+{% block content %}
+<h1>Это страница вашего аккаунта,
+  {% if current_user.is_authenticated: %}
+  {{ current_user.username }} !
+  {% else %}
+    Гость
+  {% endif %}
+</h1>
+{% endblock %}

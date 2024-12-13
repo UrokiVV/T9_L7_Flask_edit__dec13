@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+Test_DB
+{% endblock %}
+
+{% block content %}
+<h1>Test_DB</h1>
+<form method="post" action="{{ url_for('test_db') }}">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.submit() }}
+            <br>
+        </div>
+        <div>
+            <h3><strong>{{ message }}</strong></h3>
+        </div>
+
+</form>
+
+{% endblock %}
